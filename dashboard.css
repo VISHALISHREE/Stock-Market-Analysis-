@@ -1,0 +1,205 @@
+/* --------------------- General --------------------- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f3b6c;
+    color: white;
+    padding: 10px 20px;
+}
+
+.topbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.topbar .logo span {
+    color: #5AA6FF;
+}
+
+.topbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.topbar nav ul li a:hover {
+    color: #5AA6FF;
+}
+
+/* --------------------- Layout --------------------- */
+.dashboard-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    min-height: 100vh;
+}
+
+.main-panel {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* --------------------- Watchlist --------------------- */
+.sidebar h3, .sidebar h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.watchlist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.watchlist li {
+    padding: 6px 0;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar input[type=text], .sidebar input[type=number] {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 8px;
+    background-color: #5AA6FF;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar button:hover {
+    background-color: #488fd4;
+}
+
+/* --------------------- Trading Alerts --------------------- */
+#targetAlerts div, #marginAlerts div {
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    background-color: #e3f2fd;
+    border-left: 4px solid #5AA6FF;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* --------------------- KPI Cards --------------------- */
+.kpi-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.card.kpi {
+    flex: 1;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.kpi h4 {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.kpi .value {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.kpi .status {
+    font-size: 0.9em;
+}
+
+/* --------------------- Filters --------------------- */
+.filters {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filters label {
+    font-weight: 500;
+}
+
+.filters select, .filters input[type=date] {
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* --------------------- Charts --------------------- */
+.chart-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --------------------- Animations --------------------- */
+.fade {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* --------------------- Buttons Hand Cursor --------------------- */
+button, select, input {
+    cursor: pointer;
+}
+
+/* --------------------- Responsive --------------------- */
+@media(max-width: 1000px){
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        min-height: auto;
+    }
+    .kpi-row {
+        flex-direction: column;
+    }
+}
+

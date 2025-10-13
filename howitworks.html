@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading Assistant — How It Works</title>
+  <style>
+    :root {
+      --primary: #7FB7FF;
+      --primary-dark: #5AA6FF;
+      --bg: #F6FBFF;
+      --card: #FFFFFF;
+      --shadow: 0 10px 25px rgba(95,148,223,0.15);
+      --text: #0F172A;
+    }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ---------- Navbar ---------- */
+    .topbar {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:18px 40px; background:white; box-shadow:var(--shadow);
+      position: sticky; top:0; z-index: 100;
+    }
+    .logo {
+      font-weight:700; font-size:1.5rem; color:var(--primary-dark);
+    }
+    .logo span { color: var(--primary); }
+    nav ul { display:flex; gap:28px; list-style:none; }
+    nav ul li a {
+      text-decoration:none; color:var(--text); font-weight:600;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+    nav ul li a:hover { color: var(--primary-dark); transform: translateY(-2px); }
+
+    /* ---------- Main container ---------- */
+    .about-container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .about-container h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--primary-dark);
+    }
+
+    .about-container .intro {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 50px;
+    }
+
+    /* ---------- Cards ---------- */
+    .card {
+      background: var(--card);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(95,148,223,0.25);
+      background: linear-gradient(145deg, #fff, #e6f0ff);
+    }
+
+    .card h2 {
+      color: var(--primary-dark);
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .card p, .card ul li, .card ol li {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .card ul, .card ol {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    /* ---------- References ---------- */
+    .references {
+      padding: 60px 10%;
+      text-align: center;
+    }
+    .references h2 {
+      font-size: 2rem;
+      color: var(--primary-dark);
+      margin-bottom: 20px;
+    }
+    .references ul {
+      list-style: none;
+      padding: 0;
+    }
+    .references ul li {
+      margin: 10px 0;
+    }
+    .references ul li a {
+      text-decoration: none;
+      color: var(--primary-dark);
+      font-weight: 600;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .references ul li a:hover {
+      color: var(--primary);
+      transform: translateX(5px);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align:center;
+      padding:18px;
+      background:white;
+      margin-top:40px;
+      box-shadow:0 -4px 12px rgba(95,148,223,0.08);
+    }
+
+    /* ---------- Scroll reveal ---------- */
+    .scroll-reveal { opacity:0; transform:translateY(40px); transition: all 0.6s ease-out; }
+    .scroll-reveal.active { opacity:1; transform:translateY(0); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 992px) {
+      .about-container { padding: 0 15px; }
+    }
+
+    @media (max-width: 600px) {
+      .about-container h1 { font-size: 2rem; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">Trading<span>Assistant</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login / Sign Up</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="about-container">
+  <h1 class="scroll-reveal">Our Story</h1>
+  <p class="intro scroll-reveal">Discover our vision, motivation, and the value we bring to every trader.</p>
+
+  <div class="card scroll-reveal">
+    <h2>Our Vision</h2>
+    <p>Our vision is to empower individual traders and investors by providing a seamless, intelligent, and intuitive platform that simplifies intraday trading. We aim to make real-time market insights, automated trading signals, and performance analytics accessible to everyone, regardless of their experience level. By combining cutting-edge technology with a user-centric design, we strive to enhance decision-making, minimize risks, and help users achieve consistent financial growth with confidence and efficiency</p>
+  </div>
+
+  <div class="card scroll-reveal">
+    <h2>Our Motivation</h2>
+    <p>Intraday trading can be overwhelming and stressful, especially for individual traders trying to track multiple stocks and market indicators in real-time. Many opportunities are missed due to delayed information, scattered tools, or complex platforms that are hard to navigate. Our motivation is to simplify this process by creating a smart, interactive, and personalized trading assistant that consolidates essential market data, provides actionable insights, and empowers users to make informed decisions quickly and confidently. We aim to reduce stress, save time, and enhance the trading experience for every user.</p>
+  </div>
+
+  <div class="card scroll-reveal">
+  <h2>What We Offer</h2>
+  <div class="flashcards-container">
+    <div class="flashcard">
+      <h3>Interactive Dashboard</h3>
+      <p>Our dashboard consolidates live stock prices, trend charts, trade signals, and key performance indicators in one intuitive interface. Users can view the market at a glance, track multiple stocks, and quickly assess opportunities without switching between different tools or platforms.</p>
+    </div>
+
+    <div class="flashcard">
+      <h3>Personalized Watchlist</h3>
+      <p>Users can create a custom watchlist to monitor their preferred stocks. Real-time price updates, color-coded trend indicators, and notifications help users stay informed about significant movements and potential trading opportunities.</p>
+    </div>
+
+    <div class="flashcard">
+      <h3>Automated Trade Signals & Alerts</h3>
+      <p>Based on user-defined criteria, including target profit, stop-loss limits, and risk tolerance, our platform generates automated buy/sell signals. Instant notifications ensure users never miss a profitable opportunity while minimizing risk exposure.</p>
+    </div>
+
+    <div class="flashcard">
+      <h3>Real-Time Analytics & Insights</h3>
+      <p>Users receive actionable insights through data visualization, trend analysis, and historical performance tracking. This helps in understanding stock behavior, identifying patterns, and making evidence-based decisions rather than relying on guesswork.</p>
+    </div>
+
+    <div class="flashcard">
+      <h3>Secure Access & Data Protection</h3>
+      <p>The platform prioritizes user security with robust authentication and encryption measures. Personal data, trading preferences, and account information are protected to ensure safe and reliable usage.</p>
+    </div>
+
+    <div class="flashcard">
+      <h3>Trade History & Performance Tracking</h3>
+      <p>The platform keeps a record of executed trades, allowing users to review past performance, analyze strategies, and refine their trading approach for better outcomes in the future.</p>
+    </div>
+
+    <div class="flashcard">
+      <h3>User-Friendly & Minimalistic Design</h3>
+      <p>We focus on simplicity and clarity, ensuring the interface is easy to navigate, visually appealing, and not overwhelming, even for beginners.</p>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+<footer>
+  &copy; 2025 Trading Assistant — All rights reserved.
+</footer>
+
+<script>
+const scrollElements = document.querySelectorAll('.scroll-reveal');
+
+const elementInView = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+  return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+};
+
+const displayScrollElement = (element) => element.classList.add('active');
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach(el => {
+    if(elementInView(el, 1.25)) {
+      displayScrollElement(el);
+    }
+  });
+};
+
+window.addEventListener('scroll', handleScrollAnimation);
+handleScrollAnimation();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Assistant — Login</title>
+  <link rel="stylesheet" href="login.css">
+  <style>
+    .error {
+      color: #dc3545;
+      font-weight: 500;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">Trading<span>Assistant</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="howitworks.html">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="login-container">
+  <div class="login-box">
+    <h2>Welcome Back</h2>
+    <p class="hint">Login to continue to your dashboard</p>
+
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username or Email" class="input" required>
+      <input type="password" id="password" placeholder="Password" class="input" required>
+      <button type="submit" class="btn primary">Login</button>
+    </form>
+
+    <p class="error" id="errorMsg"></p>
+
+    <button class="btn google">
+      <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="G" width="18">
+      Login with Google
+    </button>
+
+    <p class="switch">Don’t have an account? <a href="signup.html">Sign up</a></p>
+  </div>
+</main>
+
+<script>
+  const form = document.getElementById('loginForm');
+  const errorMsg = document.getElementById('errorMsg');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value;
+
+    // Sample credentials
+    if(username === 'user2425' && password === 'Jenny2425') {
+      window.location.href = 'dashboard.html'; // Correct credentials
+    } else {
+      errorMsg.textContent = 'Incorrect username or password!';
+    }
+  });
+
+  // Clear error message on input
+  document.getElementById('username').addEventListener('input', () => { errorMsg.textContent = ''; });
+  document.getElementById('password').addEventListener('input', () => { errorMsg.textContent = ''; });
+</script>
+
+</body>
+</html>

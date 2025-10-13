@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Assistant — Home</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Contact Section */
+    .contact-container {
+      background: #fff;
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 50px auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      transform: translateY(50px);
+      opacity: 0;
+      animation: slideIn 1s forwards;
+      animation-delay: 0.2s;
+    }
+    .contact-container h2 {
+      font-size: 2rem;
+      color: #0d3b66;
+      margin-bottom: 25px;
+    }
+    .contact-container p {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .contact-container a {
+      color: #6a9cf9;
+      text-decoration: none;
+    }
+    .contact-container a:hover { text-decoration: underline; }
+
+    @keyframes slideIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">Trading<span>Assistant</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login / Sign Up</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Trade Smarter with <span class="highlight">Trading Assistant</span></h1>
+    <p>Your personalized intraday trading dashboard — real-time charts, watchlists & alerts in a single pastel-blue interface.</p>
+    <a href="howitworks.html" class="btn primary">About us</a>
+  </div>
+  <div class="hero-animation">
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+  </div>
+</section>
+
+<section class="features">
+  <h2>Why Choose Us?</h2>
+  <p class="features-intro">We combine real-time analytics, AI-driven insights, and a user-friendly interface to empower traders of all levels.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Real-Time Dashboard</h3>
+      <p>Track live stock prices, trends, and portfolio performance all in one intuitive interface.</p>
+    </div>
+    <div class="card">
+      <h3>Smart Alerts & Notifications</h3>
+      <p>Receive instant trade signals and notifications so you never miss an opportunity.</p>
+    </div>
+    <div class="card">
+      <h3>Interactive Watchlists</h3>
+      <p>Organize your favorite stocks, commodities, or indices with clear indicators and color-coded signals.</p>
+    </div>
+    <div class="card">
+      <h3>Machine Learning Insights</h3>
+      <p>Predictive analytics help anticipate market trends, giving you an edge in decision-making.</p>
+    </div>
+    <div class="card">
+      <h3>User-Friendly Interface</h3>
+      <p>Soft pastel-blue theme designed for comfort and clarity during long trading sessions.</p>
+    </div>
+  </div>
+  <a href="howitworks-manual.html" class="btn secondary">See how it works</a>
+</section>
+
+<!-- ---------- Contact Section ---------- -->
+<section id="contact" class="contact-container">
+  <h2>Contact Me</h2>
+  <div class="contact-details">
+    <p><strong>Name:</strong> Janani S</p>
+    <p><strong>Phone:</strong> 7930989008</p>
+    <p><strong>Email:</strong> <a href="mailto:jananijeni2405@gmail.com">jananijeni2405@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jananis2405" target="_blank">View Profile</a></p>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Trading Assistant — All rights reserved.
+</footer>
+
+</body>
+</html>
+

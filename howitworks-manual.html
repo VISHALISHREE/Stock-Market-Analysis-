@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Assistant — User Manual</title>
+  <link rel="stylesheet" href="howitworks-manual.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">Trading<span>Assistant</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login / Sign Up</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="about-container">
+  <h1 class="scroll-reveal">User Manual & Guidelines</h1>
+  <p class="intro scroll-reveal">
+    A detailed guide on how to use Trading Assistant safely and effectively.
+  </p>
+
+  <!-- What the Website Does -->
+  <div class="card do scroll-reveal">
+    <h2>What the Website Does</h2>
+    <ul>
+      <li>Provides a real-time dashboard for stock prices, trends, and performance indicators.</li>
+      <li>Interactive charts with customizable indicators and timeframes.</li>
+      <li>Automated alerts and notifications based on user-defined thresholds.</li>
+      <li>Customizable watchlists for your preferred assets.</li>
+      <li>Machine learning-powered predictive insights for smarter trading decisions.</li>
+      <li>Trade history analysis to review past performance and refine strategies.</li>
+    </ul>
+  </div>
+
+  <!-- What the Website Does NOT Do -->
+  <div class="card dont scroll-reveal">
+    <h2>What the Website Does NOT Do</h2>
+    <ul>
+      <li>It does not guarantee profits or investment success.</li>
+      <li>It does not execute trades automatically — user confirmation is required.</li>
+      <li>It is not a substitute for professional financial advice or consultation.</li>
+      <li>It cannot access private brokerage accounts without authorization.</li>
+      <li>It does not provide legal, tax, or compliance advice.</li>
+    </ul>
+  </div>
+
+  <!-- User Cautions -->
+  <div class="card caution scroll-reveal">
+    <h2>User Cautions & Recommendations</h2>
+    <ul>
+      <li>Always verify trade signals before taking action; consider news and market volatility.</li>
+      <li>Set stop-loss and risk management parameters carefully.</li>
+      <li>Do not rely solely on predictive analytics — combine with your own research.</li>
+      <li>Keep credentials secure and never share account details.</li>
+      <li>Monitor watchlists and alerts regularly to avoid missing critical updates.</li>
+      <li>Avoid over-trading or emotional decisions during volatile periods.</li>
+    </ul>
+  </div>
+
+  <!-- Best Practices -->
+  <div class="card do scroll-reveal">
+    <h2>Best Practices</h2>
+    <ul>
+      <li>Customize your dashboard for clarity and focus on relevant assets.</li>
+      <li>Use charts to compare trends across multiple timeframes.</li>
+      <li>Check trade history often to refine strategies and learn from past trades.</li>
+      <li>Combine alerts with personal analysis for informed decisions.</li>
+      <li>Keep the interface uncluttered; use watchlists and filters strategically.</li>
+      <li>Take breaks during long sessions to prevent fatigue and mistakes.</li>
+    </ul>
+  </div>
+
+  <!-- Technical Notes -->
+  <div class="card caution scroll-reveal">
+    <h2>Technical Notes & Limitations</h2>
+    <ul>
+      <li>Real-time data may have minor delays depending on market feed sources.</li>
+      <li>Machine learning insights rely on historical data; always check current conditions.</li>
+      <li>Platform performs best on modern browsers (Chrome, Edge, Firefox).</li>
+      <li>Large watchlists may reduce performance on older devices.</li>
+      <li>Internet connection is required for real-time features; offline mode is not supported.</li>
+    </ul>
+  </div>
+
+  <!-- Additional Tips -->
+  <div class="card do scroll-reveal">
+    <h2>Additional Tips</h2>
+    <ul>
+      <li>Update watchlists regularly to remove inactive assets.</li>
+      <li>Use alerts for both opportunities and potential risks.</li>
+      <li>Experiment with chart indicators to find the setup that works best for you.</li>
+      <li>Engage consistently with the platform — frequent monitoring improves decisions.</li>
+      <li>Document lessons learned to build your personal trading playbook.</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2025 Trading Assistant — All rights reserved.
+</footer>
+
+<!-- Scroll Reveal JS -->
+<script>
+  const scrollElements = document.querySelectorAll('.scroll-reveal');
+  const elementInView = (el, dividend = 1) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+  };
+  const displayScrollElement = (element) => { element.classList.add('active'); };
+  const hideScrollElement = (element) => { element.classList.remove('active'); };
+  const handleScrollAnimation = () => {
+    scrollElements.forEach(el => {
+      if (elementInView(el, 1.25)) displayScrollElement(el);
+      else hideScrollElement(el);
+    });
+  };
+  window.addEventListener('scroll', handleScrollAnimation);
+  window.addEventListener('load', handleScrollAnimation);
+</script>
+
+</body>
+</html>

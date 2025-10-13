@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trading Assistant — Dashboard</title>
+<link rel="stylesheet" href="dashboard.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  /* Hand cursor for buttons/inputs */
+  button, input, select {
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">Trading<span>Assistant</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Logout</a></li>
+      <li><a href="howitworks.html">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="dashboard-container">
+
+<!-- Sidebar -->
+<aside class="sidebar">
+<h3>Watchlist</h3>
+<ul id="watchlist" class="watchlist"></ul>
+<input type="text" id="newStock" placeholder="Add stock symbol"/>
+<button onclick="addStock()">Add</button>
+
+<h3>Trading Actions</h3>
+
+<h4>Target Trade</h4>
+<form id="targetTradeForm">
+  <input type="text" id="targetStock" placeholder="Stock Symbol" required/>
+  <input type="text" id="targetCompany" placeholder="Company Name" required/>
+  <input type="number" id="targetPrice" placeholder="Target Sell Price" step="0.01" required/>
+  <input type="number" id="targetQty" placeholder="Quantity Owned" step="1" required/>
+  <input type="number" id="targetBuyPrice" placeholder="Buy Price" step="0.01" required/>
+  <button type="submit">Set Target Trade</button>
+</form>
+<div id="targetAlerts"></div>
+
+<h4>Margin Trade</h4>
+<form id="marginTradeForm">
+  <input type="text" id="marginStock" placeholder="Stock Symbol" required/>
+  <input type="text" id="marginCompany" placeholder="Company Name" required/>
+  <input type="number" id="marginPrice" placeholder="Margin Price" step="0.01" required/>
+  <input type="number" id="marginQty" placeholder="Quantity Owned" step="1" required/>
+  <input type="number" id="marginBuyPrice" placeholder="Buy Price" step="0.01" required/>
+  <button type="submit">Set Margin Trade</button>
+</form>
+<div id="marginAlerts"></div>
+
+</aside>
+
+<section class="main-panel">
+
+<div class="kpi-row">
+  <div class="card kpi fade">
+    <h4>Portfolio Value</h4>
+    <p class="value" id="portfolioValue">₹0</p>
+    <span class="status up" id="portfolioTrend">Neutral</span>
+  </div>
+
+  <div class="card kpi fade">
+    <h4>Today’s Earnings</h4>
+    <p class="value" id="todaysPL">₹0</p>
+    <span class="status neutral" id="earningsStatus">Neutral</span>
+  </div>
+
+  <div class="card kpi fade">
+    <h4>Daily Quote</h4>
+    <p class="value" id="dailyQuote"></p>
+  </div>
+</div>
+
+<div class="filters">
+  <label for="selectedStock">Stock:</label>
+  <select id="selectedStock" onchange="loadChart()"></select>
+
+  <label for="timeframe">Timeframe:</label>
+  <select id="timeframe" onchange="loadChart()">
+    <option value="daily">Daily</option>
+    <option value="weekly">Weekly</option>
+    <option value="monthly">Monthly</option>
+    <option value="yearly">Yearly</option>
+  </select>
+
+  <label for="selectedDate">Select Date:</label>
+  <input type="date" id="selectedDate" onchange="updateDateData()"/>
+</div>
+
+<div class="card chart-card">
+  <h3>Price Trend</h3>
+  <canvas id="priceChart"></canvas>
+</div>
+
+<div class="card chart-card">
+  <h3>Volume Analysis</h3>
+  <canvas id="volumeChart"></canvas>
+</div>
+
+<div id="dateData" style="margin-top:20px;font-size:16px;"></div>
+
+</section>
+</main>
+
+<!-- Connect your JS -->
+<script src="dashboard.js"></script>
+
+</body>
+</html>
+
