@@ -26,6 +26,6 @@ Processed structured and unstructured financial datasets using Spark, PySpark, a
 - Financial data analysis and interpretation
 
 ## Contact
-- **Author:** Janani S  
+- **Author:** Vishalishree E  
 - **Email:** [jananijeni2405@gmail.com](mailto:jananijeni2405@gmail.com)  
 - **Portfolio:** [https://www.artfolio.tech/jananiS](https://www.artfolio.tech/jananiS)  
